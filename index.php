@@ -1,7 +1,7 @@
 <?php include 'header.php'; ?>
 <?php include 'menu.php'; ?>
 <h2>Place Your Order</h2>
-<form method="POST action="process.php>
+<form method="POST" action="process.php">
     <label>Name</label><input name="customer_name" required>
     <label>Customer Type</label>
     <select name="customer_type">

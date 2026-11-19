@@ -13,7 +13,7 @@
 
     $valid = $name !== ''
         && in_array($type, ['student', 'employee', 'guest'], true)
-        && in_array($product, ['M1', 'M2', 'M3', 'D1', 'D2', true])
+        && in_array($product, ['M1', 'M2', 'M3', 'D1', 'D2'], true)
         && $quantity !== false && $quantity <= 10
         && $quantity >= 1 && $quantity <= 10
         && $budget !== false && $budget !== null 
@@ -52,7 +52,7 @@
     echo '<p>Customer type: ' . htmlspecialchars(ucfirst($type)) . '</p>';
     echo '<h3>Items Ordered</h3>';
     for ($i = 1; $i <= $quantity; $i++) {
-        echo '<p>' . $i . '. ' . htmlspecialchars($productName) . ' -- PHP ' . number_format($budget, 2) . '</p>';
+        echo '<p>' . $i . '. ' . htmlspecialchars($productName) . ' -- PHP ' . number_format($price, 2) . '</p>';
     }
     echo '<p>Subtotal: PHP ' . number_format($subtotal,2) . '</p>';
     echo '<p>Discount: PHP ' . number_format($discount, 2) . '</p>';
